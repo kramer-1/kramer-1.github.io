@@ -29,6 +29,14 @@ ul{
     color:#ffffff;
 }
 
+.dark{
+    padding:15px;
+    background-color:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
 /* Header */
 header{
     background:#d190cc;
@@ -136,10 +144,50 @@ header a:hover{
     height:90px;
 }
 
+/* Sidebar */
+aside#sidebar{
+    float:right;
+    width:30%;
+    margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width:90%;
+    padding:5px;
+}
+
+/* Main-col */
+article#main-col{
+    float:left;
+    width:65%;
+}
+
+/* Services */
+
+ul#services li{
+    list-style:none;
+    padding:20px;
+    border: #cccccc; solid 1px;
+    margin-bottom:5px;
+    background:#e6e6e6;
+}
+
 footer{
     padding:20px;
     margin-top:20px;
     color:#ffffff;
     background-color:#0000ff;
     text-align:center;
+}
+
+/* Media Queries */
+
+@media(max-width: 760px){
+    header #branding,
+    header nav,
+    header nav li{
+        float:none;
+        text-align:center;
+        width:100%;
+    }
 }
