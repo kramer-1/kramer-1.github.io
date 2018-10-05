@@ -68,7 +68,7 @@ header branding{
     float:left;
 }
 
-hader #branding h1{
+header #branding h1{
     margin:0;
 }
 
@@ -202,11 +202,11 @@ footer{
     #showcase h1{
         margin-top:40px;
     }
-    #newsletter button{
+    #newsletter button, .quote button{
         display:block;
         width:100%;
     }
-    #newsletter form input[type="email"]{
+    #newsletter form input[type="email"], .quote input, .quote textarea{
         width:100%;
         margin-bottom:5px;
     }
