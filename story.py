@@ -19,7 +19,7 @@ def greeting():
     start=input("(Yes/No): ")
     start2(start)
 
-def start2(start):
+def start2(start): #To pathSplit and exit program
     if start.lower() == "yes":
         delay_print("You are walking down a path in a forest, and the path splits. On the left, there is a stone path. On the right, there is an old wooden path. Which way do you want to go? ")
         pathSplit=input("(Left/Right): ")
@@ -30,7 +30,7 @@ def start2(start):
         delay_print("That's not an option. ")
         greeting()
 
-def pathSplit2(pathSplit, start):
+def pathSplit2(pathSplit, start): #To brickHouse and bridgeOrPath
     if pathSplit.lower() == "left":
         delay_print("You find a big brick house. Do you enter the house or keep walking on the path? ")
         brickHouse=input("(Enter/Path): ")
@@ -43,7 +43,7 @@ def pathSplit2(pathSplit, start):
         delay_print("That's not an option. ")
         start2(start)
 
-def brickHouse2(brickHouse, pathSplit, start):
+def brickHouse2(brickHouse, pathSplit, start): #To leaveOrInvestigate and fightOrNothing
     if brickHouse.lower() == "enter":
         delay_print("You hear a loud noise from upstairs. Do you leave or investigate? ")
         leaveOrInvestigate=input("(Leave/Investigate): ")
@@ -56,7 +56,7 @@ def brickHouse2(brickHouse, pathSplit, start):
         delay_print("That's not an option. ")
         pathSplit2(pathSplit, start)
 
-def leaveOrInvestigate2(leaveOrInvestigate, brickHouse, pathSplit, start):
+def leaveOrInvestigate2(leaveOrInvestigate, brickHouse, pathSplit, start): #END
     if leaveOrInvestigate.lower() == "leave":
         delay_print("You go outside and find a huge pot of gold!")
         live()
@@ -67,7 +67,7 @@ def leaveOrInvestigate2(leaveOrInvestigate, brickHouse, pathSplit, start):
         delay_print("That's not an option. ")
         brickHouse2(brickHouse, pathSplit, start)
         
-def fightOrNothing2(fightOrNothing, brickHouse, pathSplit, start):
+def fightOrNothing2(fightOrNothing, brickHouse, pathSplit, start): #END
     if fightOrNothing.lower() == "fight":
         delay_print("You keep trying but it's not working.")
         die()
@@ -78,7 +78,7 @@ def fightOrNothing2(fightOrNothing, brickHouse, pathSplit, start):
         delay_print("That's not an option. ")
         brickHouse2(brickHouse, pathSplit, start)
 
-def bridgeOrPath2(bridgeOrPath, pathSplit, start):
+def bridgeOrPath2(bridgeOrPath, pathSplit, start): #To swimOrDrown and eatOrDont
     if bridgeOrPath.lower() == "bridge":
         delay_print("The bridge snaps as you are crossing it and you fall into a river. Do you try to swim to the shore or drown? ")
         swimOrDrown=input("(Swim/Drown): ")
@@ -91,7 +91,7 @@ def bridgeOrPath2(bridgeOrPath, pathSplit, start):
         delay_print("That's not an option. ")
         pathSplit2(pathSplit, start)
 
-def swimOrDrown2(swimOrDrown, bridgeOrPath, pathSplit, start):
+def swimOrDrown2(swimOrDrown, bridgeOrPath, pathSplit, start): #END
     if swimOrDrown.lower() == "swim":
         delay_print("You are able to get out of the water and you find a chest with $5,000,000 inside!")
         live()
@@ -102,7 +102,7 @@ def swimOrDrown2(swimOrDrown, bridgeOrPath, pathSplit, start):
         delay_print("That's not an option. ")
         bridgeOrPath2(bridgeOrPath, pathSplit, start)
 
-def eatOrDont2(eatOrDont, bridgeOrPath, pathSplit, start):
+def eatOrDont2(eatOrDont, bridgeOrPath, pathSplit, start): #END
     if eatOrDont.lower() == "dont" or eatOrDont.lower() == "don't":
         delay_print("You are starving!!!")
         die()
@@ -115,4 +115,4 @@ def eatOrDont2(eatOrDont, bridgeOrPath, pathSplit, start):
 
 greeting()
 
-blank=input('')
+blank=input('') #Keeps the program alive until user types something
